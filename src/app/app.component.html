@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-12 d-flex justify-content-center">
+    <div class="col-8" style="text-align:center">
+      <div style="height: 100px; background-color: green; padding-top: 30px; color: white;"    *ngIf="lable">
+        <h2>Candidate found</h2>
+      </div>
+      <div style="height: 100px; background-color: red; padding-top: 30px; color: white;" class="bg-danger" *ngIf="!lable && !loadingModel">
+        <h2>Candidate not found</h2>
+      </div>
+
+      <div style="margin-top: 300px;" *ngIf="loadingModel">
+        <h2>Loading...</h2>
+        <img src="assets/Fidget-spinner.gif" alt="loading">
+      </div>
+    
+      <video hidden id="video" width="600" height="600"></video>
+      <canvas id="canvas"></canvas>
+    
+    </div>
+  </div>
+</div>
